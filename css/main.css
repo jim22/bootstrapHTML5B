@@ -1,22 +1,124 @@
+.header {
+    background: #ccc;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.feature {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
 
+    min-height: 50rem;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 0.1rem;
+}
+.feature:after {
+    /* dark overlay over bg-image */
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+}
+.feature .container {
+    position: relative;
+    z-index: 2;
+}
+.feature-items {
+    min-height: 50rem;
+}
+.feature-items-white {
+    color: white;
+}
+.feature-item {
+    padding: 0 2rem;
+    margin: 2rem auto 5rem;
+    max-width: 50rem;
+}
+@media (min-width: 992px) {
+    .feature-item {
+        padding: 0 2rem;
+        margin: 2rem 0;    
+    }
+}
+.feature-item p:last-child {
+    margin-bottom: 0;
+}
+.teaser-item {
+    max-width: 80%;
+    margin: 6rem auto;
+}
+@media (min-width: 576px) {
+    .teaser-item {
+        max-width: 78rem;
+        margin: 4rem auto;
+    }
+}
+@media (min-width: 576px) {
+    .teaser-item.flex-row-reverse .teaser-item__image {
+        margin-left: 4rem;
+    }
+    .teaser-item.flex-row .teaser-item__image  {
+        margin-right: 4rem;
+    }
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.footer {
+    background: #ccc;
+    padding-top: 5rem;
+    padding-bottom: 3.25rem;
+    font-size: 1.4rem;
+    line-height: 1.75;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .footer {
+        text-align: left;
+    }
+}
 
+/* footer social icons */
 
+.social a svg[class*="facebook"] path {
+    fill: blue;
+}
+.social a svg[class*="twitter"] path {
+    fill: lightblue;
+}
+.social a svg[class*="youtube"] path {
+    fill: red;
+}
+.social a svg[class*="envelope"] path {
+    fill: white;
+}
 
+/* mobile menu */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#mobile-menu {
+    text-align: center;
+    background: #ccc;
+    padding: 1px 0;
+}
+@media (min-width: 992px) {
+    #mobile-menu {
+        display: none !important;
+    }
+}
+#mobile-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#mobile-menu li {
+    display: block;
+    padding: 0;
+    margin: 1rem 0;
+}
+.mobile-menu-toggle {
+    font-size: 2.5rem;
+}
